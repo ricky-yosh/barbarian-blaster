@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="barbarian-blaster"
+run/main_scene="uid://c7g3vyt5agw6a"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
