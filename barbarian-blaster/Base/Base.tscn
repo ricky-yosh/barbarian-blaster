@@ -1,24 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://commadi2g4wyl"]
+[gd_scene load_steps=4 format=3 uid="uid://commadi2g4wyl"]
 
 [ext_resource type="Script" uid="uid://d2tgpoel8ucx8" path="res://Base/base.gd" id="1_5khh3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1ktb"]
-albedo_color = Color(0.890196, 0, 0, 1)
+[ext_resource type="FontFile" uid="uid://tlabn0bom0ua" path="res://Assets/Bitcount/static/Bitcount_Roman-Regular.ttf" id="2_edygm"]
+[ext_resource type="PackedScene" uid="uid://c2a1mvrhfmvcm" path="res://Assets/Base.glb" id="2_h44yl"]
 
 [node name="Base" type="Node3D" groups=["base"]]
 script = ExtResource("1_5khh3")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-radius = 2.0
-height = 5.0
-sides = 32
-material = SubResource("StandardMaterial3D_n1ktb")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 billboard = 1
 text = "starting health
 "
+font = ExtResource("2_edygm")
 font_size = 500
 outline_size = 100
+
+[node name="Base" parent="." instance=ExtResource("2_h44yl")]
